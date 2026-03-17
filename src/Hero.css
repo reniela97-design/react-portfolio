@@ -1,0 +1,64 @@
+/* Container sa tibuok profile section */
+.profile-wrapper {
+  position: relative;
+  width: 380px; /* I-adjust sumala sa gidak-on sa imong picture */
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 190px 190px 0 0; /* Ang lingin sa babaw */
+  overflow: hidden; /* MAO NI ANG MAG-CLIP SA ICONS */
+  background: #000; /* Background para sa picture area */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ang orbit area kon asa magtuyok ang icons */
+.orbit-path {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px; 
+  height: 320px;
+  transform: translate(-50%, -50%);
+  animation: rotate-orbit 15s linear infinite;
+  pointer-events: none; /* Para dili makababag sa pag-click sa picture */
+}
+
+/* Ang tagsa-tagsa ka icon */
+.tech-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* I-position ang icons sa palibot sa orbit-path */
+.icon-react { top: 0; left: 50%; transform: translateX(-50%); }
+.icon-php { bottom: 0; left: 50%; transform: translateX(-50%); }
+.icon-js { left: 0; top: 50%; transform: translateY(-50%); }
+
+@keyframes rotate-orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Optional: I-counter rotate ang icons para dili sila baliktad tan-awon */
+.tech-icon i, .tech-icon img {
+  animation: counter-rotate 15s linear infinite;
+}
+
+@keyframes counter-rotate {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}

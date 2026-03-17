@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+@keyframes spin-slow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes reverse-spin {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 15s linear infinite;
+}
+
+.animate-reverse-spin {
+  animation: reverse-spin 15s linear infinite;
+}
+
+/* Mao ni ang mupunggot sa icons inig gawas sa profile shape */
+.profile-mask {
+  mask-image: linear-gradient(to top, black, black); /* basic mask */
+  overflow: hidden;
+}
