@@ -275,7 +275,7 @@ const App = () => {
         
         <nav className="flex justify-between items-center py-4 md:py-6 px-6 md:px-10 border-b border-gray-800/50 bg-black/30 backdrop-blur-md sticky top-0 z-50">
           <div className="text-xl font-bold tracking-widest text-white">
-            <span className="text-primary">.</span>
+            <span className="text-primary"></span>
           </div>
 
           <ul className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
