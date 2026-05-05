@@ -220,7 +220,7 @@ const Projects = () => {
 
       {selectedProject && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md" onClick={() => setSelectedProject(null)}>
-          <div className="bg-[#111] border border-gray-700 rounded-2xl p-6 md:p-10 max-w-3xl w-full relative" onClick={e => e.stopPropagation()}>
+          <div className="bg-[#111] border border-gray-700 rounded-2xl p-6 md:p-10 max-w-3xl w-full relative max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
             <button className="absolute top-4 right-5 text-gray-400 hover:text-white" onClick={() => setSelectedProject(null)}><FaTimes size={20}/></button>
             <h2 className="text-3xl font-bold text-white mb-2">{selectedProject.title}</h2>
             <p className="text-primary mb-6">{selectedProject.client}</p>
@@ -230,9 +230,9 @@ const Projects = () => {
                 <span key={idx} className="bg-primary/10 text-primary px-4 py-2 rounded-md text-sm border border-primary/20">{t}</span>
               ))}
             </div>
-            <div className="modal-images">
+            <div className="mt-8 flex flex-col gap-6">
               {selectedProject.image.map((img, idx) => (
-                <img key={idx} src={img} alt={`${selectedProject.title} screenshot ${idx + 1}`} />
+                <img key={idx} src={img} alt={`${selectedProject.title} screenshot ${idx + 1}`} className="w-full rounded-lg shadow-lg border border-gray-800" />
               ))}
             </div>
           </div>
