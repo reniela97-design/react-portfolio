@@ -173,7 +173,24 @@ const Projects = () => {
       image: "tree.png", 
       desc: "A front-end web application showcasing core design and JS principles.",
       fullDetails: "A UI-focused personal project that demonstrates my ability to design interactive elements from scratch."
+    },
+    { 
+      title: "zppsu queuing and scheduling system", 
+      client: " Client (ZPPSU)", 
+      tech: ["React", "php", "Mysql"], 
+      image: "loginqueuing.png",
+      desc: "A web-based queuing and scheduling system designed to efficiently manage client flow.",
+      fullDetails: "Developed for ZPPSU to automate their queuing process, reducing wait times and improving overall service efficiency."
+    },
+    { 
+      title: "zppsu e commerce", 
+      client: "zppsu", 
+      tech: ["React", "PHP", "MySQL"], 
+      image: "loginecom.png",
+      desc: "An e-commerce platform tailored for ZPPSU students to easily buy and sell items.",
+      fullDetails: "A dedicated online marketplace built specifically for the ZPPSU student community, featuring user authentication, product listings, and secure transaction tracking."
     }
+    
   ];
 
   return (
