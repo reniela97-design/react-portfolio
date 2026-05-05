@@ -146,7 +146,8 @@ const Projects = () => {
       title: "Task Management System", 
       client: "Emergence Systems & Solutions", 
       tech: ["Laravel", "Blade", "MySQL", "Tailwind"], 
-      image: "emer.png", 
+      // First image is the thumbnail
+      image: ["emer.png"], 
       desc: "A comprehensive task tracking system to streamline workflow and monitor project progress.",
       fullDetails: "This project was built during my OJT. It focuses on solving the company's need for an internal task tracker. I utilized Laravel's eloquent ORM for complex database relationships."
     },
@@ -154,7 +155,7 @@ const Projects = () => {
       title: "MSU Buug Website", 
       client: "Academic Institution", 
       tech: ["PHP", "CSS", "JavaScript", "HTML"], 
-      image: "un.jpg", 
+      image: ["un.jpg"], 
       desc: "A dedicated platform for MSU Buug to provide school resources and announcements.",
       fullDetails: "Built with core web technologies, it ensures fast loading times and a responsive design across all devices."
     },
@@ -162,7 +163,7 @@ const Projects = () => {
       title: "RFID School Attendance", 
       client: "School Administration", 
       tech: ["Laravel", "PHP", "RFID", "MySQL"], 
-      image: "on.png", 
+      image: ["on.png"], 
       desc: "Automated attendance tracking utilizing RFID hardware for real-time reporting.",
       fullDetails: "Integrated an external RFID scanner with a Laravel backend to automate student attendance."
     },
@@ -170,7 +171,7 @@ const Projects = () => {
       title: "Tree Coin Web App", 
       client: "Personal Project", 
       tech: ["HTML", "CSS", "Vanilla JS"], 
-      image: "tree.png", 
+      image: ["tree.png"], 
       desc: "A front-end web application showcasing core design and JS principles.",
       fullDetails: "A UI-focused personal project that demonstrates my ability to design interactive elements from scratch."
     },
@@ -178,15 +179,17 @@ const Projects = () => {
       title: "zppsu queuing and scheduling system", 
       client: " Client (ZPPSU)", 
       tech: ["React", "php", "Mysql"], 
-      image: "loginqueuing.png",
+      // I-ilis lang ang "queuing-dashboard.png" sa saktong ngalan sa imong ikaduhang picture
+      image: ["loginqueuing.png", "queuing-dashboard.png"],
       desc: "A web-based queuing and scheduling system designed to efficiently manage client flow.",
       fullDetails: "Developed for ZPPSU to automate their queuing process, reducing wait times and improving overall service efficiency."
     },
     { 
       title: "zppsu e commerce", 
-      client: "zppsu", 
+      client: " Client (zppsu)", 
       tech: ["React", "PHP", "MySQL"], 
-      image: "loginecom.png",
+      // I-ilis lang ang "ecom-dashboard.png" sa saktong ngalan sa imong ikaduhang picture
+      image: ["loginecom.png", "ecom-dashboard.png"],
       desc: "An e-commerce platform tailored for ZPPSU students to easily buy and sell items.",
       fullDetails: "A dedicated online marketplace built specifically for the ZPPSU student community, featuring user authentication, product listings, and secure transaction tracking."
     }
@@ -200,7 +203,7 @@ const Projects = () => {
         {projectList.map((proj, i) => (
           <div key={i} onClick={() => setSelectedProject(proj)} className="bg-[#111]/80 backdrop-blur-sm border border-gray-800 rounded-xl overflow-hidden hover:border-primary transition-all cursor-pointer group">
             <div className="h-48 overflow-hidden">
-              <img src={proj.image} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition" />
+              <img src={proj.image[0]} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition" />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-white mb-2">{proj.title}</h3>
@@ -225,6 +228,11 @@ const Projects = () => {
             <div className="flex flex-wrap gap-3">
               {selectedProject.tech.map((t, idx) => (
                 <span key={idx} className="bg-primary/10 text-primary px-4 py-2 rounded-md text-sm border border-primary/20">{t}</span>
+              ))}
+            </div>
+            <div className="modal-images">
+              {selectedProject.image.map((img, idx) => (
+                <img key={idx} src={img} alt={`${selectedProject.title} screenshot ${idx + 1}`} />
               ))}
             </div>
           </div>
