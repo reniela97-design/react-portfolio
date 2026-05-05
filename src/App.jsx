@@ -180,7 +180,7 @@ const Projects = () => {
       client: " Client (ZPPSU)", 
       tech: ["React", "php", "Mysql"], 
       // I-ilis lang ang "queuing-dashboard.png" sa saktong ngalan sa imong ikaduhang picture
-      image: ["loginqueuing.png", "queuing-dashboard.png"],
+      image: ["loginqueuing.png", "queuing.png"],
       desc: "A web-based queuing and scheduling system designed to efficiently manage client flow.",
       fullDetails: "Developed for ZPPSU to automate their queuing process, reducing wait times and improving overall service efficiency."
     },
@@ -189,7 +189,7 @@ const Projects = () => {
       client: " Client (zppsu)", 
       tech: ["React", "PHP", "MySQL"], 
       // I-ilis lang ang "ecom-dashboard.png" sa saktong ngalan sa imong ikaduhang picture
-      image: ["loginecom.png", "ecom-dashboard.png"],
+      image: ["loginecom.png", "ecom.png"],
       desc: "An e-commerce platform tailored for ZPPSU students to easily buy and sell items.",
       fullDetails: "A dedicated online marketplace built specifically for the ZPPSU student community, featuring user authentication, product listings, and secure transaction tracking."
     }
